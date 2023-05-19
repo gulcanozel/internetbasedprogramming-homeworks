@@ -1,0 +1,80 @@
+<!--
+1-Use all input types in HTML 5
+Hidden,Tel, Email, Number, Range, Search, Image, Week, Url
+DateTime Local, Month, Time-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 3</title>
+
+</head>
+<body>
+
+<br><br>
+<!--Image---->
+<input type="image" src="https://images.pexels.com/photos/459335/pexels-photo-459335.jpeg" alt="image" height="150px"
+       width="150px" style="float:top;"><br>
+<!--Search---->
+<label for="site-search">Search the site:</label>
+<input type="search" id="site-search" name="q">
+<button>Search</button>
+<!------Hidden--->
+<input type="hidden" name="inputName" value="inputValue"><br><br>
+
+<h2>Form</h2><br>
+<form>
+    <input type="text" name="name" placeholder="Name" required><br>
+    <input type="text" name="surname" placeholder="Surname" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+    <input type="tel" name="tel" placeholder="(Area code) Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required> <small>Format:
+    123-456-7890</small> <br>
+    <input type="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+           title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+           required><br><br>
+    <label>Age: </label>
+    <input type="number" name="quantity" value="18"><br>
+    <p>Please select your favorite Web language:</p>
+
+    <input type="radio" id="html" name="fav_language" value="HTML">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">CSS</label><br>
+    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+    <label for="javascript">JavaScript</label><br>
+
+    <input type="submit" value="Publish"> <!-- form will be validated -->
+    <input type="submit" value="Submit" formnovalidate><!-- form will NOT be validated -->
+</form>
+<p>---------------------------------</p>
+<form>
+    <br><label for="rate">Rate us: </label>
+    <input type="range" id="rate" name="rate" min="0" max="10">
+    <input type="submit">
+</form>
+
+<h2>Another form</h2>
+<form>
+    <!---week---->
+    Week: <input type="week"/>&emsp;
+
+    <!----url---->
+    <label for="url">Enter an https:// URL:</label>
+    <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="50">
+
+    <!---datetime local---->
+    Tarih: <input type="datetime-local">&emsp;
+
+    <!----month---->
+    Ay: <input type="month">&emsp;
+
+    <!---time------>
+    Saat: <input type="time">
+
+    <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>

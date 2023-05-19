@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 4</title>
+</head>
+<body>
+<h2>HTML Form Action: POST and GET</h2>
+<p><b>Get: </b> Default. Appends the form-data to the URL in name/value pairs: URL?name=value&name=value</p>
+<p><b>Post: </b> Sends the form-data as an HTTP post transaction</p>
+
+
+    <form action="add.php" method="get" target="_blank">
+        <label for="firstname">First name:</label>
+        <input type="text" id="firstname" name="firstname"><br><br>
+        <label for="lastname">Last name:</label>
+        <input type="text" id="lastname" name="lastname"><br><br>
+        <input type="submit" value="Kaydet"> <input type="reset">
+    </form>
+<p>------------------------------------------------</p>
+    <form action="add.php" method="post">
+        <label for="fullname">First name:</label>
+        <input type="text" id="fullname" name="fullname"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Kaydet"> <input type="reset">
+    </form>
+</body>
+</html>
